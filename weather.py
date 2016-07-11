@@ -5,6 +5,7 @@ import pyowm
 import datetime
 import socket
 import socks
+import os
 from gtts import gTTS
 
 # See:
@@ -39,3 +40,5 @@ socks.set_default_proxy(socks.SOCKS5, "10.0.1.201", 1088)
 socket.socket = socks.socksocket
 tts = gTTS(text=weatherText, lang='zh-cn')
 tts.save("/tmp/weather.mp3")
+
+# os.system('airplay.sh WEATHER')
