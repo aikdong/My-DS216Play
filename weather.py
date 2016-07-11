@@ -27,7 +27,7 @@ else:
 
 temperature = weather.get_temperature(unit='celsius')
 
-weatherText = "天气预报：{0}白天最低{1:.0f}度，最高{2:.1f}度，晚上{3:.0f}度，{4}，湿度{5:.0f}%".format(
+weatherText = "天气预报：{0}白天最低{1:.0f}度，最高{2:.1f}度，晚间{3:.0f}度，{4}，湿度{5:.0f}%".format(
     dayName,
     temperature['min'],
     temperature['max'],
