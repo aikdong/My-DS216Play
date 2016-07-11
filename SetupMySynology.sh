@@ -4,17 +4,21 @@
 
 
 # Install shadowsocks
-/volume1/\@appstore/py3k/usr/local/bin/python3 -m ensurepip
+# /volume1/\@appstore/py3k/usr/local/bin/python3 -m ensurepip
+# /volume1/\@appstore/py3k/usr/local/bin/pip3 install --upgrade pip
+# /volume1/\@appstore/py3k/usr/local/bin/pip3 install shadowsocks
+# /volume1/\@appstore/py3k/usr/local/bin/pip3 install pyowm
+# /volume1/\@appstore/py3k/usr/local/bin/pip3 install gTTS
+# /volume1/\@appstore/py3k/usr/local/bin/pip3 install PySocks
 
-/volume1/\@appstore/py3k/usr/local/bin/pip3 install --upgrade pip
-/volume1/\@appstore/py3k/usr/local/bin/pip3 install shadowsocks
+
 cd /volume1/homes/aik/DSM/
 cp ./shadowsocks.json /etc/
 
 # Auto run script
 cp ./S99shadowsocks.sh /usr/local/etc/rc.d/
 chmod 755 /usr/local/etc/rc.d/S99shadowsocks.sh
-/usr/local/etc/rc.d/S99shadowsocks.sh start
+/usr/local/etc/rc.d/S99shadowsocks.sh restart
 
 # PAC file for Web service
 cp ./ss.pac /volume1/web/
