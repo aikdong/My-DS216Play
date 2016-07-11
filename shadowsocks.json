@@ -1,7 +1,7 @@
 {
 "server": "sg05-24.ssv7.net",
 "server_port": 32463,
-"local_address": "127.0.0.1",
+"local_address": "0.0.0.0",
 "local_port": 1088,
 "password": "vh3cuByNE57c",
 "timeout": 300,

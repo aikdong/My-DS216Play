@@ -36,7 +36,7 @@ weatherText = "天气预报：{0}白天最低{1:.0f}度，最高{2:.1f}度，晚
     weather.get_detailed_status(),
     weather.get_humidity())
 
-socks.set_default_proxy(socks.SOCKS5, "10.0.1.201", 1088)
+socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 1088)
 socket.socket = socks.socksocket
 tts = gTTS(text=weatherText, lang='zh-cn')
 tts.save("/tmp/weather.mp3")
