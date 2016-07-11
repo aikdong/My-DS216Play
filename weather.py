@@ -41,4 +41,4 @@ socket.socket = socks.socksocket
 tts = gTTS(text=weatherText, lang='zh-cn')
 tts.save("/tmp/weather.mp3")
 
-# os.system('airplay.sh WEATHER')
+os.system('airplay.sh WEATHER')
