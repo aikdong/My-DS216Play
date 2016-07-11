@@ -25,3 +25,4 @@ chmod 755 /usr/local/bin/airplay.sh
 
 # Weather
 cp ./weather.py /usr/local/bin/
+
