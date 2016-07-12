@@ -6,9 +6,11 @@ AIRPORT="5000"
 PIDPATH="/run/synoairplayd.$AIRHOST.$AIRPORT.pid" 
 
 # kill the new processes
-NEWPID=`cat $PIDPATH`
 if [ -s $NEWPID ]; then
-    kill $NEWPID
+    NEWPID=`cat $PIDPATH`
+    if [ -n "$NEWPID" ]; then
+        kill $NEWPID
+    fi
 fi
 
 case $1 in
@@ -51,7 +53,9 @@ case $1 in
 esac
 
 # kill the new processes
-NEWPID=`cat $PIDPATH`
 if [ -s $NEWPID ]; then
-    kill $NEWPID
+    NEWPID=`cat $PIDPATH`
+    if [ -n "$NEWPID" ]; then
+        kill $NEWPID
+    fi
 fi
