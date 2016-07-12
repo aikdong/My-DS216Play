@@ -30,7 +30,7 @@ new_time = data[0][u'time_point']
 
 if old_time != new_time:
     # Save file
-    with open(filename, 'w') as f:
+    with open(filename, 'wb') as f:
         f.write(response.text.encode('utf-8'))
 
     weatherText = None
