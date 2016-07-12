@@ -30,3 +30,5 @@ chmod 755 /usr/local/bin/airplay.sh
 # Weather
 cp ./weather.py /usr/local/bin/
 
+# PM2.5
+cp ./pm25.py /usr/local/bin/

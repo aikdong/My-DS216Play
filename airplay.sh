@@ -20,9 +20,12 @@ DOORBELL )
 PERIPH="--ip $AIRHOST --port $AIRPORT --volume 46 /volume1/music/Ringtone/dingding.m4a" 
 ;;
 WEATHER )
-PERIPH="--ip $AIRHOST --port $AIRPORT --volume 36 /tmp/weather.mp3"
+PERIPH="--ip $AIRHOST --port $AIRPORT --volume 46 /tmp/weather.mp3"
 ;;
-CLOCK ) 
+PM25 )
+PERIPH="--ip $AIRHOST --port $AIRPORT --volume 46 /tmp/pm25.mp3"
+;;
+CLOCK )
 HOUR=`date +%H` 
 PERIPH="--ip $AIRHOST --port $AIRPORT --volume 25 /volume1/music/CLOCK/01.m4a"
 esac
@@ -38,6 +41,9 @@ DOORBELL )
 sleep 15s
 ;;
 WEATHER )
+sleep 15s
+;;
+PM25 )
 sleep 15s
 ;;
 CLOCK )
