@@ -20,7 +20,7 @@ case $1 in
         PERIPH="--volume 46 /volume1/music/Ringtone/dingding.m4a" 
     ;;
     WEATHER )
-        PERIPH="--volume 46 /tmp/weather.mp3"
+        PERIPH="--volume 36 /tmp/weather.mp3"
     ;;
     PM25 )
         PERIPH="--volume 46 /tmp/pm25.mp3"
