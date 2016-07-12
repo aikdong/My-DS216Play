@@ -31,27 +31,27 @@ case $1 in
 esac
 
 # run the song
-/var/packages/AudioStation/target/sbin/synoairplayd --ip $AIRHOST --port $AIRPORT $PERIPH --foreground
+/var/packages/AudioStation/target/sbin/synoairplayd --ip $AIRHOST --port $AIRPORT $PERIPH
 
-# case $1 in
-#     MORNING ) 
-#         sleep 10m 
-#     ;;
-#     DOORBELL )
-#         sleep 15s
-#     ;;
-#     WEATHER )
-#         sleep 15s
-#     ;;
-#     PM25 )
-#         sleep 15s
-#     ;;
-#     CLOCK )
-#         sleep 8s
-# esac
+case $1 in
+    MORNING ) 
+        sleep 10m 
+    ;;
+    DOORBELL )
+        sleep 15s
+    ;;
+    WEATHER )
+        sleep 15s
+    ;;
+    PM25 )
+        sleep 15s
+    ;;
+    CLOCK )
+        sleep 8s
+esac
 
-# # kill the new processes
-# NEWPID=`cat $PIDPATH`
-# if [ -s $NEWPID ]; then
-#     kill $NEWPID
-# fi
+# kill the new processes
+NEWPID=`cat $PIDPATH`
+if [ -s $NEWPID ]; then
+    kill $NEWPID
+fi
