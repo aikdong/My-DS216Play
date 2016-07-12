@@ -34,12 +34,12 @@ if old_time != new_time:
         f.write(response.text.encode('utf-8'))
 
     weatherText = None
-    if new_aqi > 200 and old_aqi < 200:
-        weatherText = "请注意，空气质量严重恶化，尽量不要外出，尽量不要外出"
-    if new_aqi > 50 and old_aqi < 50:
-        weatherText = "空气质量差，请关窗，空气质量差，请关窗"
-    elif old_aqi > 100 and new_aqi < 60:
-        weatherText = "现在，空气质量已好转"
+    if new_aqi >= 200 and old_aqi < 200:
+        weatherText = '请注意，空气质量严重恶化：'+new_aqi+'，尽量不要外出，尽量不要外出'
+    if new_aqi >= 100 and old_aqi < 100:
+        weatherText = '空气质量差：'+new_aqi+'，请关窗'
+    elif old_aqi >= 100 and new_aqi < 60:
+        weatherText = '现在，空气质量已好转'
 
     pre = '空气质量报告：'
     if weatherText != None:
