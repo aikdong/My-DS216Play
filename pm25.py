@@ -48,4 +48,4 @@ if old_time != new_time:
         tts = gTTS(text=pre+weatherText, lang='zh-cn')
         tts.save("/tmp/pm25.mp3")
 
-        # os.system('airplay.sh PM25')
+        os.system('airplay.sh PM25')
