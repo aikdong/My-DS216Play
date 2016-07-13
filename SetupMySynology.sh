@@ -27,11 +27,6 @@ cp ./ss.pac /volume1/web/
 cp ./airplay.sh /usr/local/bin/
 chmod 755 /usr/local/bin/airplay.sh
 
-# lcd4linux
-cp ./lcd4linux.conf /etc/
-chown root:root /etc/lcd4linux.conf
-chmod 700 /etc/lcd4linux.conf
-
 # Weather
 cp ./weather.py /usr/local/bin/
 
