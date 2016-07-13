@@ -36,6 +36,17 @@ weatherText = "天气预报：{0}白天最低{1:.0f}度，最高{2:.1f}度，晚
     weather.get_detailed_status(),
     weather.get_humidity())
 
+# Save to file
+dataText = "{0}\n{1:.0f}\n{2:.1f}\n{3:.0f}\n{4}\n{5:.0f}%".format(
+    dayName,
+    temperature['min'],
+    temperature['max'],
+    temperature['night'],
+    weather.get_detailed_status(),
+    weather.get_humidity())
+with open('/tmp/weather.data', 'wb') as f:
+    f.write(dataText.encode('utf-8'))
+
 socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 1088)
 socket.socket = socks.socksocket
 tts = gTTS(text=weatherText, lang='zh-cn')
