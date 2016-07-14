@@ -20,7 +20,7 @@ cp ./S99shadowsocks.sh /usr/local/etc/rc.d/
 chmod 755 /usr/local/etc/rc.d/S99shadowsocks.sh
 /usr/local/etc/rc.d/S99shadowsocks.sh restart
 
-# PAC file for Web service
+# PAC file to Web station folder
 cp ./ss.pac /volume1/web/
 
 # Airpaly
