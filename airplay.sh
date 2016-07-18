@@ -6,7 +6,7 @@ AIRPORT="5000"
 PIDPATH="/run/synoairplayd.$AIRHOST.$AIRPORT.pid" 
 
 # kill the new processes
-if [ -s $NEWPID ]; then
+if [ -s $PIDPATH ]; then
     NEWPID=`cat $PIDPATH`
     if [ -n "$NEWPID" ]; then
         kill $NEWPID
@@ -49,13 +49,15 @@ case $1 in
         sleep 15s
     ;;
     CLOCK )
-        sleep 8s
+        sleep 10s
 esac
 
 # kill the new processes
-if [ -s $NEWPID ]; then
+if [ -s $PIDPATH ]; then
     NEWPID=`cat $PIDPATH`
     if [ -n "$NEWPID" ]; then
         kill $NEWPID
     fi
+else
+    echo 'No pid file'
 fi
