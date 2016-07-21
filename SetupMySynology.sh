@@ -16,9 +16,11 @@ cd /volume1/homes/aik/DSM/
 cp ./shadowsocks.json /etc/
 
 # Auto run script
-cp ./S99shadowsocks.sh /usr/local/etc/rc.d/
-chmod 755 /usr/local/etc/rc.d/S99shadowsocks.sh
+cp ./S99*.sh /usr/local/etc/rc.d/
+chmod 755 /usr/local/etc/rc.d/S99*.sh
 /usr/local/etc/rc.d/S99shadowsocks.sh restart
+/usr/local/etc/rc.d/S99CNTV.sh restart
+/usr/local/etc/rc.d/S99Hexo.sh restart
 
 # PAC file to Web station folder
 cp ./ss.pac /volume1/web/
