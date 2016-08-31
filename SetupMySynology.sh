@@ -18,12 +18,12 @@ cp ./shadowsocks.json /etc/
 # Auto run script
 cp ./S99*.sh /usr/local/etc/rc.d/
 chmod 755 /usr/local/etc/rc.d/S99*.sh
-/usr/local/etc/rc.d/S99shadowsocks.sh restart
-/usr/local/etc/rc.d/S99CNTV.sh restart
-/usr/local/etc/rc.d/S99Hexo.sh restart
+/usr/local/etc/rc.d/shadowsocks.sh restart
+/usr/local/etc/rc.d/CNTV.sh restart
 
-# PAC file to Web station folder
+# Copy files to Web station folder
 cp ./ss.pac /volume1/web/
+cp ./hexo.sh /volume1/web/
 
 # Airpaly
 cp ./airplay.sh /usr/local/bin/

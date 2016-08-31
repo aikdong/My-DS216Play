@@ -43,7 +43,7 @@ case $1 in
         sleep 15s
     ;;
     WEATHER )
-        sleep 15s
+        sleep 17s
     ;;
     PM25 )
         sleep 15s

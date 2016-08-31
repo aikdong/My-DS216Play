@@ -10,7 +10,7 @@ EOF
 start_services() {
 	#Hexo
 	cd /volume1/web/
-	hexo g -d -w > hexo.log &
+	hexo g -d > hexo.log &
 }
 
 stop_services() {

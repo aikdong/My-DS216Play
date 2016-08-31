@@ -15,7 +15,7 @@ from gtts import gTTS
 
 
 owm = pyowm.OWM(API_key='1f4e3c6bc64e4d81a5d6bc2d9eb90e00',language='zh', subscription_type='free')
-# 1814906  YuBei ChongQing China
+# 1814906 ChongQing China
 locationID = 1814906
 if (pyowm.timeutils.tomorrow(0,0) - datetime.datetime.now()).seconds/3600 < 8 :
     forecast = owm.daily_forecast_at_id(locationID, 2).get_forecast()
